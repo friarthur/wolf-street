@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="website icon" type="png"
+    href="lobo.pnj.jpeg">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #273845;
+            color: white;
+            text-align: center;
+        }
+
+        .d2 {
+            display: block;
+            border: 1px solid black;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0);
+            inline-size: 370px;
+            block-size: auto;
+            margin: 200px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .d3 label {
+            display: block;
+            margin-block-end: 10px;
+        }
+
+        .d3 input {
+            inline-size: 70%;
+            padding: 10px;
+            margin-block-end: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .d3 button {
+            inline-size: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .d3 button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Faça seu cadastro</h1>
+        <form action="cadastro.php" method="POST"></form>
+        <div class="d2">
+            <div class="d3">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required><br>
+        
+
+                <label for="senha">Crie uma senha:</label>
+                <input type="password" id="senha" name="senha">
+
+                <label for="confirmar-senha">Confirme a senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha">
+
+                <a href="index.html"><button>Cadastrar</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+    
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roupas femininas</title>
+    <link rel="website icon" type="png"
+    href="lobo.pnj.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body{
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    
+    
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+
+}
+ul{
+   list-style-type: none;
+   display: inline-flex;
+   
+   
+}
+li{
+    margin-inline-start: 124px;
+    display: inline;
+    margin-right: 10px;
+    
+}
+li a {
+    text-align: right;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transform: scale(1);
+}
+i{
+    margin-inline-start: 20px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    min-inline-size: 100px;
+    z-index: 1;
+    background-color: rgb(4, 4, 4);
+    border: 1px solid white;
+
+    
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu a{
+    list-style-type: none;
+    padding: 6px 9px;
+    display: block;
+    align-items: center;
+    text-align: center; /* Centraliza horizontalmente */
+display: flex; /* Centraliza verticalmente */
+align-items: center;
+color: white;
+    
+}
+.dropdown li{
+    margin-inline-start: 5px;
+    block-size: 110px;
+}
+.dropdown a:hover{
+    background-color: #555;
+    transform: scale(1);
+}
+.dropdown-menu a i.fa-envelope {
+text-align: center;
+display: inline-flex;
+margin-inline-start: 0px;
+}
+.dropdown-menu i{
+border: none;
+font-size: 20px;
+}
+.content {
+padding: 20px;
+}
+.product-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-card {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid rgb(78, 77, 77);
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #1877f2;
+}
+
+    </style>
+     <nav>
+        <ul>
+           
+            <li>
+                <a href="index.html">HOME</a>
+           </li>
+
+
+           
+            <li class="dropdown">SHOP
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="feeminino.html">FEMININO</a>
+                        <a href="masculin.html">MASCULINO</a>
+                        <a href="personalizada.html">PERSONALIZADA</a>
+                    </li>
+                </ul>
+           </li>
+        
+            <li>
+                <a href="">BLOG</a>
+           </li>
+
+
+            <li class="dropdown">ENTRAR
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="cadastro.html">CADASTRO</a>
+                        <a href="login.html">LOGIN</a>
+                    </li>
+                </ul>
+               
+           </li>
+           <meta name="viewport" content="width=device-width">
+           <li class="dropdown">CONTATOS
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="mailto:seuemail@example.com"><i class="social-icon"><i class="fas fa-envelope"></i></a>
+                    
+               </li>
+            </ul>
+           </li>
+          
+        </ul>
+        <a href="cariin.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="login.html"><i class="fas fa-user"></i></a> 
+       
+    </nav>
+    <div class="product-row">
+        <div class="product-card">                
+            <img src="camisa1.png" alt="">
+            <h3>Camisa branca</h3>
+            <p>Preço: R$39,00 </p>
+            <a href="f1.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+        <div class="product-card">                
+            <img src="c2.png" alt="">
+            <h3>Camista Preta Skate</h3>
+            <p>Preço: R$40,00</p>
+            <a href="f2.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+        <div class="product-card">                
+            <img src="c3.png" alt="">
+            <h3>Camisa High Preta</h3>
+            <p>Preço: R$55,00 </p>
+            <a href="f3.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+        <div class="product-card">                
+            <img src="c4.png" alt="">
+            <h3>Camisa High Preta</h3>
+            <p>Preço: R$65,00 </p>
+            <a href="f4.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+        <div class="product-card">                
+            <img src="c5.png" alt="">
+            <h3>Camisa Santa Cruz </h3>
+            <p>Preço: R$:80,00 </p>
+            <a href="f5.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+        <div class="product-card">                
+            <img src="c6.png" alt="">
+            <h3>Camisa Adidas Preta</h3>
+            <p>Preço: R$85,00 </p>
+            <a href="f6.html"><button onclick="verMais()">Ver Mais</button></a>
+        </div>
+</body>
+</html>

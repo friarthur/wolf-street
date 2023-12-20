@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizador de Roupas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="personalizada.css">
+   
+</head>
+<body>
+    <nav>
+        <ul>
+           
+            <li>
+                <a href="">HOME</a>
+           </li>
+
+
+           
+            <li class="dropdown">SHOP
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="">FEMININO</a>
+                        <a href="masculino.html">MASCULINO</a>
+                        <a href="">PERSONALIZADA</a>
+                    </li>
+                </ul>
+           </li>
+        
+            <li>
+                <a href="">BLOG</a>
+           </li>
+
+
+            <li class="dropdown">ENTRAR
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="cadastro.html">CADASTRO</a>
+                        <a href="login.html">LOGIN</a>
+                    </li>
+                </ul>
+               
+           </li>
+           <meta name="viewport" content="width=device-width">
+           <li class="dropdown">CONTATOS
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="mailto:seuemail@example.com"><i class="social-icon"><i class="fas fa-envelope"></i></a>
+                    
+               </li>
+            </ul>
+           </li>
+          
+        </ul>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="login.html"><i class="fas fa-user"></i></a> 
+       
+    </nav>
+    <div class="container">
+    <h1>Personalizador de Roupas</h1>
+
+    <form id="customizationForm">
+        <label for="imageInput">Escolha uma imagem:</label>
+        <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+
+        <div>
+            <label for="colorSelect">Escolha a cor:</label>
+            <select id="colorSelect" onchange="updatePrice()">
+                <option value="vermelho">Vermelho</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="fabricSelect">Escolha o tecido:</label>
+            <select id="fabricSelect" onchange="updatePrice()">
+                <option value="algodao">Algodão</option>
+                <option value="seda">Seda</option>
+                <option value="lona">Lona</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="price">Preço:</label>
+            <span id="price">R$0.00</span>
+        </div>
+    </form>
+
+    <img id="preview" alt="Pré-visualização da imagem">
+
+    <button id="buyButton" onclick="buy()">Comprar</button>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Nosso pix: 0000000</p>
+            <button onclick="voltarParaIndex()">Voltar para a página inicial</button>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <h4>© 2023 Wolf Street. Todos os direitos reservados.</h4>
+    </footer>
+
+
+    <script>
+       
+    function previewImage() {
+        const input = document.getElementById('imageInput');
+        const preview = document.getElementById('preview');
+
+        const file = input.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function updatePrice() {
+        const color = document.getElementById('colorSelect').value;
+        const fabric = document.getElementById('fabricSelect').value;
+
+        let price = 0;
+
+        if (color === 'vermelho') {
+            price += 10;
+        } else if (color === 'azul') {
+            price += 10;
+        } else if (color === 'verde') {
+            price += 10;
+        }
+
+        if (fabric === 'algodao') {
+            price += 55;
+        } else if (fabric === 'seda') {
+            price += 45;
+        } else if (fabric === 'lona') {
+            price += 50;
+        }
+
+        const priceElement = document.getElementById('price');
+        priceElement.textContent = `R$${price.toFixed(2)}`;
+
+        // Mostra ou oculta o botão de compra com base no preço
+        const buyButton = document.getElementById('buyButton');
+        buyButton.style.display = price > 50 ? 'block' : 'none';
+    }
+
+    function exibirPopup() {
+        const price = parseFloat(document.getElementById('price').textContent.replace('R$', ''));
+
+        if (price > 50) {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+    }
+
+    function voltarParaIndex() {
+        window.location.href = 'index.html';
+    }
+
+    // Adicione este ouvinte de evento para o botão de compra
+    document.getElementById('buyButton').addEventListener('click', exibirPopup);
+</script>
+
+    </script>
+      
+    </body>
+    </html>
